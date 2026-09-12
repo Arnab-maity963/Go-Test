@@ -8,11 +8,11 @@ import (
 func main() {
 	age, err := slp.Int(
 		slp.Prompt("Enter age: "),
-		slp.MaxAttempt(0),
+		slp.MaxAttempt(3),
 	)
 	if err != nil {
-		fmt.Println("You die....");
+		fmt.Println("Invalid....");
 	} else {
-		fmt.Println("Your age is ",age);
+		fmt.Println("Your age is",age);
 	}
 }
